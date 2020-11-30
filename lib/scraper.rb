@@ -11,11 +11,12 @@ class Scraper
 
     def make_tracklists
         self.get_tracklists.each do |tracklist|
-            sleep(2)
+            sleep(3)
             local_link = tracklist.css(".tlLink a")[0]["href"]
             url = "http://1001tracklists.com#{local_link}"
             tl = Tracklist.new
             tl.page_scraped(url)
+            print tl.title
             tl.make_tracks
         end
     end

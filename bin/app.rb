@@ -24,7 +24,7 @@ end
 def puts_announcement(arg)
     puts ""
     puts "----------------------"
-    puts "#{arg.upcase}"
+    puts arg.upcase
     puts "----------------------"
     puts ""
 end

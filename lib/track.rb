@@ -1,5 +1,5 @@
 class Track
-    attr_accessor :title, :artist, :label, :timestamp, :number, :confirmation_status, :spotify_info, :tracklist
+    attr_accessor :title, :artist, :label, :timestamp, :number, :confirmation_status, :tracklist
 
     @@all = []
 
