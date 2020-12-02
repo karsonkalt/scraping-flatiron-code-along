@@ -33,9 +33,8 @@ class Tracklist
   def make_tracks
     #Variable to use if mashup track
     mashup_number = 0
-
     self.get_tracks.each do |post|
-      print "."
+      print ".".colorize(:green)
       track = Track.new
       track.tracklist = self
 
@@ -96,7 +95,7 @@ class Tracklist
 
       if track.number != mashup_number
         mashup_number = track.number
-        puts "Track #{track.number}"
+        puts "Track #{track.number}".colorize(:blue)
       else
         spacer = "  "
         puts "#{spacer}Track played together with previous track"
